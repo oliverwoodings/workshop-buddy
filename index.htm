@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+	<title>Workshop buddy - optimized cut list diagrams for sheet and linear materials</title>
+
+	<meta name="description" content="A free online cut list generator for sheet and linear materials">
+
+	<link rel="stylesheet" href="/stuff/style.css" async>
+
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet" async>
+</head>
+
+<body>
+	<div id="message-area"></div>
+	<div id="outer-wrapper">
+
+		<h1>Cut optimization diagram generator</h1>
+		<p>Workshop-buddy is a free online tool designed to make your workshop life a little easier. We're currently in BETA, so you may find a few bugs here and there.</p>
+		<p>Tips:</p>
+
+		<div class="help-text"><img src="stuff/info.svg" class="info-icon">Use decimal units and use the same units throughout</div>
+		<div class="help-text"><img src="stuff/info.svg" class="info-icon">Save your project often (at the moment you can only save one project)</div>
+		<div id="help-toggle">Click here to toggle the tips</div>
+
+		<p>Please select below if you are interested in creating a cut list for sheet or linear material...</p>
+
+		<div id="mode">
+
+			<div class="image-button-wrapper">
+				<div class="image-button" id="sheet-material"></div>
+				<div class="image-button-label">Sheet material calculator</div>
+			</div>
+
+			<div class="image-button-wrapper">
+				<div class="image-button" id="linear-material"></div>
+				<div class="image-button-label">Linear material calculator</div>
+			</div>
+
+		</div>
+
+		<div id="input-wrapper" onkeypress="return checkEnter(event)">
+
+			<div class="input-zone">
+
+				<h2>Stock</h2>
+				<div class="help-text"><img src="stuff/info.svg" class="info-icon">This is the source material which you'll be chopping up - add as many as you need</div>
+				<div class="help-text"><img src="stuff/info.svg" class="info-icon">Name your stock so you can easily reference them in the diagrams</div>
+				<div id="sheet-container"></div>
+
+				<button type="button" id="create-sheet">+ Add new stock</button>
+
+			</div>
+
+			<div class="input-zone">
+				<h2>Blade width</h2>
+				<div class="help-text"> <img src="stuff/info.svg" class="info-icon">Circular saw blades tend to be between 1.5 and 2.5mm - it should be labelled on your blade</div>
+				<input type="number" id="blade-width" value="1" step="0.25" min="0.5" max="10">
+			</div>
+
+			<div class="input-zone">
+
+				<h2>Cuts</h2>
+				<div class="help-text"><img src="stuff/info.svg" class="info-icon">These are the sizes of the material you need for your project - add as many as you need</div>
+				<div class="help-text"><img src="stuff/info.svg" class="info-icon">Name your cuts so you can easily reference them in the diagrams</div>
+				<div class="help-text linear-help"><img src="stuff/info.svg" class="info-icon">When using linear material, the width of the cut is automatically set to allow the best visibility in the diagrams</div>
+
+
+				<div id="cut-container"></div>
+
+				<button type="button" id="create-cut">+ Add new cut</button>
+
+			</div>
+
+		</div>
+
+		<div id="options-wrapper">
+
+			<h2>Options</h2>
+
+			<div class="help-text"><img src="stuff/info.svg" class="info-icon">To make the most efficient use of the stock material - leave longitudinal and cross cut optimisation off</div>
+
+			<div class="checkbox-wrapper">
+				<div class="checkbox" id="rip-priority"></div>
+				<div class="checkbox-label">Optimise for longitudinal cuts</div>
+			</div>
+
+			<div class="checkbox-wrapper">
+				<div class="checkbox" id="cross-cut-priority"></div>
+				<div class="checkbox-label">Optimise for cross cuts</div>
+			</div>
+
+		</div>
+
+		<div class="checkbox-wrapper">
+			<div class="checkbox" id="add-new-sheets"></div>
+			<div class="checkbox-label">Automatically add new material</div>
+		</div>
+
+		<div id="auto-sheet-input">
+
+			<input type="number" class="sheet width" value="" placeholder="Width" id="auto-sheet-width">
+			<input type="number" class="sheet length" value="" placeholder="Length" id="auto-sheet-length">
+
+		</div>
+
+		<div id="cta-wrapper">
+
+			<button id="calculate">Calculate</button>
+			<button id="show-offcuts">Highlight offcuts</button>
+
+		</div>
+
+
+		<div id="save-wrapper">
+			<button id="save">Save this job</button>
+			<button id="recall">Recall saved job</button>
+
+		</div>
+
+		<div class="help-text"><img src="stuff/info.svg" class="info-icon">At the moment you can only save a single job - we're working on it ;)</div>
+
+
+
+		<div id="canvas-container"></div>
+
+
+
+	</div>
+</body>
+
+<!-- <script src="main.js"></script> -->
+<script src="stuff/main-min.js"></script>
+
+</html>

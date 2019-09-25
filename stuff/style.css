@@ -1,0 +1,331 @@
+html,
+body {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+}
+#outer-wrapper {
+  margin: 8px;
+}
+h1 {
+  font-size: 18px;
+  margin: 5px 5px 5px 0px;
+  margin-bottom: 10px;
+  color: #006B98;
+}
+h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  color: #006B98;
+}
+h3 {
+  color: #006B98;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: green;
+}
+#logo {
+  width: 400px;
+}
+.info-icon {
+  width: 18px;
+  position: absolute;
+  left: -25px;
+  top: -1px;
+}
+.help-text {
+  margin-left: 25px;
+  line-height: 18px;
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+#help-toggle {
+  font-size: 13px;
+  color: green;
+  cursor: pointer;
+}
+.linear-help {
+  display: none;
+}
+button {
+  width: 200px;
+  height: 30px;
+  border: 0;
+  background-color: #006B98;
+  margin: 5px 5px 5px 0px;
+  border-radius: 3px;
+  display: block;
+  color: white;
+}
+#calculate {
+  background-color: #ffca68;
+  color: black;
+  font-weight: bold;
+}
+input {
+  width: 60px;
+  height: 25px;
+  margin: 5px 5px 5px 0px;
+  border: 1px solid #006B98;
+  border-radius: 3px;
+  padding: 3px;
+  font-size: 12px;
+}
+.input-zone {
+  background-color: #f8f8f8;
+  padding: 5px;
+  border: 2px solid #006B98;
+  border-radius: 3px;
+  margin: 5px 5px 5px 0px;
+}
+.uncut-quantity {
+  display: inline-block;
+  padding-left: 5px;
+}
+.cut-delete-button,
+.sheet-delete-button {
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 31px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #c10000;
+  text-decoration: underline;
+}
+input.sheet.number,
+input.cut.number {
+  width: 20px;
+  border: 0;
+  font-weight: bold;
+  color: #006B98;
+  font-size: 18px;
+  background-color: transparent;
+}
+.checkbox-wrapper {
+  width: 100%;
+  height: 20px;
+  padding: 5px;
+}
+.checkbox {
+  display: block;
+  float: left;
+  width: 20px;
+  height: 100%;
+  margin-right: 5px;
+  background-color: red;
+  border-radius: 3px;
+}
+.checkbox-label {
+  display: block;
+  padding-top: calc(2.5px);
+  width: 100%;
+  height: 100%;
+}
+canvas {
+  image-rendering: optimizeQuality;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+  cursor: pointer;
+}
+.cut.message {
+  margin-left: 31px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.sheet-info {
+  background-color: aqua;
+  height: 50px;
+  width: 300px;
+}
+.sheet.name,
+.cut.name {
+  width: 206px;
+}
+#em {
+  display: inline;
+}
+.sheet.width,
+.cut.width,
+.grain-preference {
+  margin-left: 31px;
+}
+#sheet-material {
+  background-color: green;
+  background-image: url('/stuff/sheet-button.svg');
+}
+.individual-cut-wrapper,
+.individual-sheet-wrapper {
+  width: 270px;
+  display: inline-block;
+  margin-bottom: 5px;
+  vertical-align: top;
+}
+.grain-preference {
+  width: 215px;
+}
+#create-sheet,
+#create-cut {
+  margin-left: 31px;
+}
+.cut-canvas,
+.line-canvas,
+.info-canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.canvas-wrapper {
+  position: relative;
+}
+#cta-wrapper,
+#save-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+#cta-wrapper button {
+  min-width: 150px;
+}
+#input-wrapper {
+  min-width: 300px;
+}
+#auto-sheet {
+  display: none;
+  padding: 5px;
+  margin-left: 25px;
+}
+#auto-sheet > .sheet.height {
+  margin-left: 0;
+}
+select {
+  height: 34px;
+  -webkit-appearance: menulist-button;
+  font-size: 12px;
+  padding: 5px;
+  background-color: white;
+  border: 1px solid #006B98;
+  margin: 5px 5px 5px 0px;
+  border: 1px solid black;
+}
+.up-arrow {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: bottom;
+}
+.image-button {
+  width: 200px;
+  height: 100px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.image-button-wrapper {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.image-button-label {
+  margin-top: 5px;
+  font-size: 13px;
+}
+#linear-material {
+  background-color: red;
+  background-image: url('/stuff/linear-button.svg');
+}
+#auto-sheet-input {
+  display: none;
+}
+@media only screen and (min-width: 750px) {
+  .individual-sheet-wrapper,
+  .individual-cut-wrapper {
+    width: 100%;
+    display: block;
+  }
+  .sheet-delete-button,
+  .cut-delete-button,
+  .sheet.width,
+  .cut.width {
+    margin-left: 0 !important;
+  }
+  .grain-preference {
+    margin-left: 0;
+  }
+  .cut.message {
+    margin-left: 31px;
+    display: block;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #logo {
+    width: 100%;
+  }
+  .image-button-wrapper {
+    width: 100%;
+  }
+}
+#message-area {
+  position: fixed;
+  z-index: 100;
+  top: -85px;
+  width: 100%;
+  height: 75px;
+  background-color: dimgrey;
+  color: white;
+  padding: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  opacity: 0.99;
+}
+#message-area.animateIn {
+  animation-direction: normal;
+  animation-duration: 250ms;
+  animation-iteration-count: 1;
+  animation-name: slideInFromTop;
+  animation-timing-function: cubic-bezier(0.87, -0.41, 0.19, 1.44);
+  animation-fill-mode: forwards;
+  -webkit-transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+#message-area.animateOut {
+  animation-direction: normal;
+  animation-duration: 200ms;
+  animation-iteration-count: 1;
+  animation-name: slideOutToTop;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  -webkit-transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes slideOutToTop {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+.welcome-diagram {
+  width: 590px;
+  height: 300px;
+}
